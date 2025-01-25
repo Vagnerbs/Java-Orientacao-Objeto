@@ -1,11 +1,17 @@
+package br.com.alura.screenmatch.modelos;
+
 public class Filme {
 
-    String nome;
-    int anoDeLancamento;
+    public String nome;
+    public int anoDeLancamento;
     boolean incluidoNoPlano;
-    double somaDasAvaliacoes;
-    int totalDeAvaliacoes;
-    int duracaoEmMinutos;
+    private double somaDasAvaliacoes;
+    private int totalDeAvaliacoes;
+    public int duracaoEmMinutos;
+
+    public int getTotalDeAvaliacoes(){
+        return totalDeAvaliacoes;
+    }
 
     public void exibeFichaTecnica(){
         System.out.println("Nome do filme: " + nome);
@@ -20,4 +26,5 @@ public class Filme {
     public double pegaMediaDasAvaliacoes(){
         return somaDasAvaliacoes / totalDeAvaliacoes;
     }
+
 }
